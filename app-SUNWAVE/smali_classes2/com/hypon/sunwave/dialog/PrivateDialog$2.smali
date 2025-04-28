@@ -1,0 +1,70 @@
+.class Lcom/hypon/sunwave/dialog/PrivateDialog$2;
+.super Ljava/lang/Object;
+.source "PrivateDialog.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/hypon/sunwave/dialog/PrivateDialog;->showConnectDialog(Landroid/content/Context;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/hypon/sunwave/dialog/PrivateDialog;
+
+
+# direct methods
+.method constructor <init>(Lcom/hypon/sunwave/dialog/PrivateDialog;)V
+    .locals 0
+
+    .line 108
+    iput-object p1, p0, Lcom/hypon/sunwave/dialog/PrivateDialog$2;->this$0:Lcom/hypon/sunwave/dialog/PrivateDialog;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 0
+
+    .line 111
+    iget-object p1, p0, Lcom/hypon/sunwave/dialog/PrivateDialog$2;->this$0:Lcom/hypon/sunwave/dialog/PrivateDialog;
+
+    invoke-static {p1}, Lcom/hypon/sunwave/dialog/PrivateDialog;->access$100(Lcom/hypon/sunwave/dialog/PrivateDialog;)Landroid/app/Dialog;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->dismiss()V
+
+    .line 112
+    iget-object p1, p0, Lcom/hypon/sunwave/dialog/PrivateDialog$2;->this$0:Lcom/hypon/sunwave/dialog/PrivateDialog;
+
+    invoke-static {p1}, Lcom/hypon/sunwave/dialog/PrivateDialog;->access$200(Lcom/hypon/sunwave/dialog/PrivateDialog;)Lcom/hypon/sunwave/dialog/PrivateDialog$OnTipItemClickListener;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 113
+    iget-object p1, p0, Lcom/hypon/sunwave/dialog/PrivateDialog$2;->this$0:Lcom/hypon/sunwave/dialog/PrivateDialog;
+
+    invoke-static {p1}, Lcom/hypon/sunwave/dialog/PrivateDialog;->access$200(Lcom/hypon/sunwave/dialog/PrivateDialog;)Lcom/hypon/sunwave/dialog/PrivateDialog$OnTipItemClickListener;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/hypon/sunwave/dialog/PrivateDialog$OnTipItemClickListener;->sureClick()V
+
+    :cond_0
+    return-void
+.end method
